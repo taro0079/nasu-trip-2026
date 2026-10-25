@@ -1,99 +1,208 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f2ed">
-  <meta name="description" content="2026年10月28日〜29日の那須1泊2日旅行。南ヶ丘牧場、乗馬、バレルサウナ、つつじ吊橋、殺生石、鹿の湯、美術館を巡る旅のしおり。">
-  <title>那須 1泊2日 旅のしおり｜2026.10.28–29</title>
-  <style>
-    :root { --ink:#27372c; --muted:#657367; --green:#426a52; --mint:#eaf1e8; --paper:#f7f6f2; --line:#dce3d9; --gold:#c69b5e; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.7; }
-    .wrap { max-width:830px; margin:auto; padding:24px 18px 66px; }
-    header { padding:43px 34px 38px; border-radius:22px; color:#fff; background:linear-gradient(135deg,#345b48,#66846a); position:relative; overflow:hidden; }
-    header:after { content:""; position:absolute; width:220px; height:220px; border:1px solid #ffffff42; border-radius:50%; right:-65px; top:-100px; box-shadow:0 0 0 35px #ffffff0d,0 0 0 70px #ffffff09; pointer-events:none; }
-    .eyebrow { font-size:12px; font-weight:700; letter-spacing:.22em; opacity:.85; }
-    h1 { font-size:clamp(30px,6vw,49px); line-height:1.25; margin:10px 0 12px; letter-spacing:.04em; }
-    .subtitle { font-size:17px; margin:0 0 22px; opacity:.95; }
-    .meta { display:flex; flex-wrap:wrap; gap:8px; }
-    .pill { background:#ffffff24; border:1px solid #ffffff55; padding:6px 12px; border-radius:30px; font-size:13px; }
-    section { background:#fff; border:1px solid #e8ebe4; border-radius:19px; margin-top:20px; padding:25px 26px; box-shadow:0 5px 20px #2d493708; }
-    .section-top { display:flex; gap:13px; align-items:center; margin-bottom:6px; }
-    .day-badge { min-width:50px; min-height:50px; padding:6px; display:flex; align-items:center; justify-content:center; border-radius:13px; background:var(--mint); color:var(--green); font-weight:800; font-size:14px; text-align:center; line-height:1.25; }
-    h2 { margin:0; font-size:23px; line-height:1.35; }
-    .lead { color:var(--muted); font-size:14px; margin:5px 0 22px 63px; }
-    .timeline { list-style:none; margin:0; padding:0 0 0 10px; }
-    .timeline li { display:grid; grid-template-columns:118px 20px 1fr; gap:10px; align-items:start; min-height:52px; }
-    .time { font-size:14px; font-weight:750; color:var(--green); padding-top:2px; font-variant-numeric:tabular-nums; white-space:nowrap; }
-    .stem { position:relative; height:100%; display:flex; justify-content:center; }
-    .stem:before { content:""; width:2px; height:100%; background:var(--line); position:absolute; top:10px; }
-    .stem:after { content:""; width:10px; height:10px; border-radius:50%; background:var(--green); border:2px solid white; box-shadow:0 0 0 2px #b4cbb8; position:absolute; top:7px; }
-    li:last-child .stem:before { display:none; }
-    .activity { padding:0 0 18px; }
-    .activity strong { display:block; font-size:15px; }
-    .activity small { display:block; font-size:12px; color:var(--muted); margin-top:2px; }
-    a { color:#356a4e; text-underline-offset:3px; }
-    .note { margin-top:12px; padding:12px 15px; border-radius:11px; background:#f3f6ef; color:#526855; font-size:13px; }
-    .items { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px 16px; margin-top:14px; }
-    .item { font-size:14px; padding:8px 10px; background:#f7f8f5; border-radius:9px; }
-    .item::before { content:"✓"; color:var(--green); font-weight:bold; margin-right:8px; }
-    .summary { color:var(--muted); font-size:14px; margin-bottom:0; }
-    footer { color:#788477; font-size:12px; text-align:center; margin-top:28px; }
-    @media(max-width:520px) { .wrap { padding:12px 11px 40px; } header { border-radius:17px; padding:31px 22px; } section { padding:22px 16px; border-radius:16px; } .timeline { padding-left:0; } .timeline li { grid-template-columns:98px 18px 1fr; gap:6px; } .time { font-size:12px; } .activity strong { font-size:14px; } .lead { margin-left:0; } .items { grid-template-columns:1fr; } }
-    @media print { body { background:white; } .wrap { max-width:none; padding:0; } header,section { break-inside:avoid; box-shadow:none; } header { -webkit-print-color-adjust:exact; print-color-adjust:exact; } section { margin-top:12px; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>那須 1泊2日の旅</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 縦一本の旅程表。日ごとに時刻の縦軸を引き、移動は細字で控えめに。 */
+:root{
+  --bg:#f3f4ef; --surface:#ffffff; --fg:#22281f; --muted:#5f6a5a; --line:#d9ddd0;
+  --forest:#2f4a36; --maple:#b8451f; --maple-soft:#f6e2d7; --forest-soft:#e3ebe2;
+  --display:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#161a15; --surface:#1f241e; --fg:#e7eadf; --muted:#a3ad9c; --line:#343b31;
+  --forest:#9cc3a3; --maple:#ec8a5f; --maple-soft:#3a2419; --forest-soft:#22301f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161a15; --surface:#1f241e; --fg:#e7eadf; --muted:#a3ad9c; --line:#343b31;
+  --forest:#9cc3a3; --maple:#ec8a5f; --maple-soft:#3a2419; --forest-soft:#22301f; color-scheme:dark}
+
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding-block:40px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;font-weight:700}
+.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--maple);font-weight:700}
+
+header{display:flex;flex-direction:column;gap:16px}
+header h1{font-size:clamp(30px,7vw,44px);line-height:1.25;color:var(--forest)}
+.dates{font-size:17px;font-weight:500;font-variant-numeric:tabular-nums}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.facts div{background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.facts dt{font-size:11px;letter-spacing:.1em;color:var(--muted)}
+.facts dd{margin:0;font-weight:700;font-size:14px}
+.facts .goal dd{color:var(--maple)}
+@media (max-width:520px){.facts{grid-template-columns:1fr}}
+
+.day{display:flex;flex-direction:column;gap:18px}
+.day-head{display:flex;flex-direction:column;gap:4px;padding-bottom:14px;border-bottom:2px solid var(--forest)}
+.day-head h2{font-size:24px;line-height:1.4}
+.day-head .theme{color:var(--muted);font-size:14px}
+
+ol.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.timeline li{display:grid;grid-template-columns:7.5em 1fr;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.timeline time{font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted);white-space:nowrap}
+.timeline .what{min-width:0}
+.timeline li.spot .what{font-weight:700}
+.timeline li.move .what{color:var(--muted);font-size:13px}
+.timeline li.move .what::before{content:"→ ";color:var(--line)}
+.timeline li.key{background:var(--maple-soft);border-radius:6px;padding-inline:10px;margin-inline:-10px;border-bottom-color:transparent}
+.timeline li.key time,.timeline li.key .what{color:var(--maple);font-weight:700}
+@media (max-width:420px){.timeline li{grid-template-columns:6.4em 1fr;gap:10px}}
+
+section.check h2{font-size:22px;margin-bottom:6px}
+section.check .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.group h3{font-family:var(--body);font-size:13px;letter-spacing:.08em;color:var(--forest)}
+.group ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+label.item{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:4px 0}
+label.item input{accent-color:var(--forest);width:17px;height:17px;margin-top:4px;flex:none}
+label.item input:checked + span{color:var(--muted);text-decoration:line-through}
+input:focus-visible{outline:2px solid var(--maple);outline-offset:2px}
+
+.theme-box{background:var(--forest-soft);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.theme-box h2{font-size:22px;color:var(--forest)}
+.theme-box dl{margin:0;display:flex;flex-direction:column;gap:10px}
+.theme-box dl div{display:grid;grid-template-columns:4em 1fr;gap:8px}
+.theme-box dt{font-weight:700;color:var(--forest)}
+.theme-box dd{margin:0}
+.rule{border-top:1px solid var(--line);padding-top:14px;font-weight:700}
+.rule strong{color:var(--maple)}
+</style>
 </head>
 <body>
-<main class="wrap">
+
+<div class="wrap">
   <header>
-    <div class="eyebrow">TRAVEL ITINERARY</div>
-    <h1>那須 1泊2日<br>旅のしおり</h1>
-    <p class="subtitle">牧場と乗馬、サウナと紅葉。温泉と美術館も楽しむ2日間。</p>
-    <div class="meta"><span class="pill">2026.10.28（水）〜 10.29（木）</span><span class="pill">車で移動</span><span class="pill">宿泊：なすっぽ</span></div>
+    <span class="eyebrow">TRIP PLAN · 栃木県 那須</span>
+    <h1>那須旅行<br>1泊2日スケジュール</h1>
+    <div class="dates">2026年10月28日（水）〜 29日（木）</div>
+    <dl class="facts">
+      <div><dt>宿泊先</dt><dd>森deワーケ なすっぽ</dd></div>
+      <div><dt>移動手段</dt><dd>車</dd></div>
+      <div class="goal"><dt>帰宅目標</dt><dd>10/29（木）20:30</dd></div>
+    </dl>
   </header>
-  <section>
-    <div class="section-top"><div class="day-badge">DAY<br>01</div><h2>10月28日（水）</h2></div>
-    <p class="lead">南ヶ丘牧場でランチと乗馬。夕方は宿のバレルサウナでリフレッシュ。</p>
+
+  <section class="day">
+    <div class="day-head">
+      <span class="eyebrow">DAY 1 · 10月28日（水）</span>
+      <h2>南ヶ丘牧場・乗馬・バレルサウナ</h2>
+      <span class="theme">牧場で動物とふれあい、宿のバレルサウナでリラックス。</span>
+    </div>
     <ol class="timeline">
-      <li><span class="time">9:30〜10:00</span><span class="stem"></span><div class="activity"><strong>東京出発</strong><small>道路の混雑によって到着時刻は変動</small></div></li>
-      <li><span class="time">13:00〜13:45</span><span class="stem"></span><div class="activity"><strong>南ヶ丘牧場でランチ</strong><small><a href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener noreferrer">南ヶ丘牧場 公式サイト</a></small></div></li>
-      <li><span class="time">13:45〜14:45</span><span class="stem"></span><div class="activity"><strong>乗馬体験・動物とのふれあい</strong><small>乗馬は当日受付。天候・運営状況を現地で確認</small></div></li>
-      <li><span class="time">14:45〜15:15</span><span class="stem"></span><div class="activity"><strong>ソフトクリーム・牧場散策</strong></div></li>
-      <li><span class="time">15:15〜15:45</span><span class="stem"></span><div class="activity"><strong>なすっぽへ移動</strong></div></li>
-      <li><span class="time">15:45〜17:15</span><span class="stem"></span><div class="activity"><strong>チェックイン・バレルサウナ</strong><small>予約済みチェックイン枠は16:00〜17:00。サウナ利用条件は宿に確認</small></div></li>
-      <li><span class="time">17:15〜18:00</span><span class="stem"></span><div class="activity"><strong>シャワー・身支度</strong></div></li>
-      <li><span class="time">18:00〜19:30</span><span class="stem"></span><div class="activity"><strong>ディナー</strong></div></li>
-      <li><span class="time">20:00〜</span><span class="stem"></span><div class="activity"><strong>宿でのんびり</strong></div></li>
+      <li class="spot"><time>9:30〜10:00</time><span class="what">東京出発</span></li>
+      <li class="spot"><time>13:00〜13:45</time><span class="what">南ヶ丘牧場でランチ</span></li>
+      <li class="spot"><time>13:45〜14:45</time><span class="what">乗馬体験・動物とのふれあい</span></li>
+      <li class="spot"><time>14:45〜15:15</time><span class="what">ソフトクリーム・牧場散策</span></li>
+      <li class="move"><time>15:15〜15:45</time><span class="what">なすっぽへ移動</span></li>
+      <li class="spot"><time>15:45〜17:15</time><span class="what">チェックイン・バレルサウナ</span></li>
+      <li class="spot"><time>17:15〜18:00</time><span class="what">シャワー・身支度</span></li>
+      <li class="spot"><time>18:00〜19:30</time><span class="what">ディナー</span></li>
+      <li class="spot"><time>20:00〜</time><span class="what">宿でのんびり</span></li>
     </ol>
   </section>
-  <section>
-    <div class="section-top"><div class="day-badge">DAY<br>02</div><h2>10月29日（木）</h2></div>
-    <p class="lead">吊り橋と殺生石を散策し、鹿の湯へ。午後は2つの美術館を巡る。</p>
+
+  <section class="day">
+    <div class="day-head">
+      <span class="eyebrow">DAY 2 · 10月29日（木）</span>
+      <h2>紅葉・源泉かけ流し温泉・美術館</h2>
+      <span class="theme">那須の紅葉と歴史ある源泉かけ流し温泉を楽しみ、美術館を巡って帰宅。</span>
+    </div>
     <ol class="timeline">
-      <li><span class="time">8:45〜9:00</span><span class="stem"></span><div class="activity"><strong>朝食・チェックアウト</strong><small>朝食とチェックアウトを含む時間枠。朝食は事前に済ませると安心</small></div></li>
-      <li><span class="time">9:00〜9:30</span><span class="stem"></span><div class="activity"><strong>つつじ吊橋へ移動</strong></div></li>
-      <li><span class="time">9:30〜10:05</span><span class="stem"></span><div class="activity"><strong>つつじ吊橋で紅葉散策・写真撮影</strong></div></li>
-      <li><span class="time">10:05〜10:20</span><span class="stem"></span><div class="activity"><strong>殺生石へ移動</strong></div></li>
-      <li><span class="time">10:20〜10:45</span><span class="stem"></span><div class="activity"><strong>殺生石散策</strong></div></li>
-      <li><span class="time">10:45〜10:55</span><span class="stem"></span><div class="activity"><strong>鹿の湯へ移動</strong></div></li>
-      <li><span class="time">10:55〜11:35</span><span class="stem"></span><div class="activity"><strong>鹿の湯で源泉かけ流し温泉</strong><small><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B9%BF%E3%81%AE%E6%B9%AF+%E9%82%A3%E9%A0%88" target="_blank" rel="noopener noreferrer">Google マップで場所を確認</a></small></div></li>
-      <li><span class="time">11:35〜12:45</span><span class="stem"></span><div class="activity"><strong>移動・ランチ</strong></div></li>
-      <li><span class="time">12:45〜13:45</span><span class="stem"></span><div class="activity"><strong>那須ステンドグラス美術館</strong><small><a href="https://sgm-nasu.com/" target="_blank" rel="noopener noreferrer">公式サイト</a></small></div></li>
-      <li><span class="time">13:45〜14:05</span><span class="stem"></span><div class="activity"><strong>那須オルゴール美術館へ移動</strong></div></li>
-      <li><span class="time">14:05〜14:45</span><span class="stem"></span><div class="activity"><strong>那須オルゴール美術館</strong><small><a href="https://nasuorgel.jp/" target="_blank" rel="noopener noreferrer">公式サイト</a></small></div></li>
-      <li><span class="time">14:45〜15:00</span><span class="stem"></span><div class="activity"><strong>帰宅準備・帰路へ</strong></div></li>
-      <li><span class="time">15:00</span><span class="stem"></span><div class="activity"><strong>那須出発</strong></div></li>
-      <li><span class="time">20:30まで</span><span class="stem"></span><div class="activity"><strong>東京の自宅に帰宅</strong><small>渋滞状況によって変動</small></div></li>
+      <li class="spot"><time>8:45〜9:00</time><span class="what">朝食・チェックアウト</span></li>
+      <li class="move"><time>9:00〜9:30</time><span class="what">つつじ吊橋へ移動</span></li>
+      <li class="spot"><time>9:30〜10:05</time><span class="what">つつじ吊橋で紅葉散策・写真撮影</span></li>
+      <li class="move"><time>10:05〜10:20</time><span class="what">殺生石へ移動</span></li>
+      <li class="spot"><time>10:20〜10:45</time><span class="what">殺生石散策</span></li>
+      <li class="move"><time>10:45〜10:55</time><span class="what">鹿の湯へ移動</span></li>
+      <li class="spot"><time>10:55〜11:35</time><span class="what">鹿の湯で源泉かけ流し温泉</span></li>
+      <li class="spot"><time>11:35〜12:45</time><span class="what">移動・ランチ</span></li>
+      <li class="spot"><time>12:45〜13:45</time><span class="what">那須ステンドグラス美術館</span></li>
+      <li class="move"><time>13:45〜14:05</time><span class="what">那須オルゴール美術館へ移動</span></li>
+      <li class="spot"><time>14:05〜14:45</time><span class="what">那須オルゴール美術館</span></li>
+      <li class="spot"><time>14:45〜15:00</time><span class="what">帰宅準備・帰路へ</span></li>
+      <li class="key"><time>15:00</time><span class="what">那須出発</span></li>
+      <li class="key"><time>20:30まで</time><span class="what">東京の自宅に帰宅</span></li>
     </ol>
   </section>
-  <section>
-    <h2>持ち物・メモ</h2>
-    <div class="items"><div class="item">防寒着・上着</div><div class="item">歩きやすい靴</div><div class="item">温泉・サウナ用タオルと着替え</div><div class="item">スマホ充電器</div><div class="item">水分補給用の飲み物</div><div class="item">必要ならサウナ用グッズ</div></div>
-    <div class="note">※ 時刻は旅行用の予定です。紅葉シーズンの道路混雑、乗馬の天候中止、施設の営業時間・最終受付にご注意ください。1日目のチェックイン予約枠は16:00〜17:00です。サウナの利用可否・予約方法、美術館の実演時間は事前にご確認ください。</div>
-    <p class="summary">1日目は牧場のランチと乗馬、宿のサウナを満喫。2日目は紅葉の吊り橋と殺生石、鹿の湯での入浴、美術館2館を楽しみ、15:00に那須を出発するプランです。</p>
+
+  <section class="check">
+    <h2>持ち物チェックリスト</h2>
+    <p class="sub">チェックはこの端末のブラウザにだけ保存されます。</p>
+    <div class="groups">
+      <div class="group"><h3>衣類・日用品</h3><ul>
+        <li><label class="item"><input type="checkbox" id="p1"><span>防寒着・羽織もの</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p2"><span>歩きやすい靴</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p3"><span>着替え・下着</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p4"><span>洗面用品・スキンケア</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p5"><span>スマートフォン・充電器</span></label></li>
+      </ul></div>
+      <div class="group"><h3>サウナ・温泉</h3><ul>
+        <li><label class="item"><input type="checkbox" id="p6"><span>水着などのサウナ用インナー</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p7"><span>サウナ・温泉用タオル</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p8"><span>ビニール袋（濡れたもの用）</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p9"><span>飲み物</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p10"><span>現金・小銭</span></label></li>
+      </ul></div>
+      <div class="group"><h3>車・旅行用品</h3><ul>
+        <li><label class="item"><input type="checkbox" id="p11"><span>運転免許証</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p12"><span>ETCカード</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p13"><span>モバイルバッテリー</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p14"><span>雨具</span></label></li>
+        <li><label class="item"><input type="checkbox" id="p15"><span>飲み物・軽食</span></label></li>
+      </ul></div>
+    </div>
   </section>
-  <footer>NASU TRIP · OCT 28–29, 2026</footer>
-</main>
+
+  <section class="check">
+    <h2>出発前に確認すること</h2>
+    <div class="groups">
+      <div class="group"><ul>
+        <li><label class="item"><input type="checkbox" id="c1"><span>なすっぽのバレルサウナを予約</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c2"><span>南ヶ丘牧場の乗馬受付時間</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c3"><span>鹿の湯の営業情報</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c4"><span>美術館2か所の営業日・演奏時間</span></label></li>
+      </ul></div>
+      <div class="group"><ul>
+        <li><label class="item"><input type="checkbox" id="c5"><span>10月28日・29日の天気</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c6"><span>那須周辺の紅葉状況</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c7"><span>往復の道路渋滞予測</span></label></li>
+        <li><label class="item"><input type="checkbox" id="c8"><span>1日目の夕食場所</span></label></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="theme-box">
+    <h2>今回の旅行のテーマ</h2>
+    <dl>
+      <div><dt>1日目</dt><dd>牧場で動物とふれあい、宿のバレルサウナでリラックス。</dd></div>
+      <div><dt>2日目</dt><dd>那須の紅葉と歴史ある源泉かけ流し温泉を楽しみ、美術館を巡って帰宅。</dd></div>
+    </dl>
+    <p class="rule" style="margin:0"><strong>帰宅時間20:30厳守。</strong>無理に予定を詰め込まず、時間が押したら観光を短縮する。</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  var KEY="nasu-trip-checks";
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{};}catch(e){}
+  document.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+    if(state[cb.id]) cb.checked=true;
+    cb.addEventListener("change",function(){
+      state[cb.id]=cb.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}
+    });
+  });
+})();
+</script>
 </body>
 </html>
